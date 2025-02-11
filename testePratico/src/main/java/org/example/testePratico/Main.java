@@ -111,5 +111,15 @@ public class Main {
             .forEach(f -> System.out.println("Nome: " + f.getNome() + " | Data Nascimento: " + f.getDataNascimento().format(formatter) + 
                                     " | Salário: R$ " + df.format(f.getSalario()) + " | Função: " + f.getFuncao()));
 
+
+        System.out.println("\nTOTAL DOS SALARIOS:");
+
+        // Calcular o total dos salários
+        BigDecimal totalSalarios = funcionarios.stream()
+        .map(Funcionario::getSalario) 
+        .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        System.out.println("Total dos Salários: R$ " + df.format(totalSalarios));
+
     }
 }
