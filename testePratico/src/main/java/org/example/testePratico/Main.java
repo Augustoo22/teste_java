@@ -121,5 +121,15 @@ public class Main {
 
         System.out.println("Total dos Salários: R$ " + df.format(totalSalarios));
 
+        BigDecimal salarioMinimo = new BigDecimal("1212.00");
+
+        System.out.println("\nQUANTIDADE DE SALARIOS MINIMOS POR FUNCIONARIO:");
+        
+        for (Funcionario f : funcionarios) {
+        BigDecimal salariosMinimos = f.getSalario().divide(salarioMinimo, 2, RoundingMode.HALF_UP);
+        System.out.println(f.getNome() + " ganha " + salariosMinimos + " salários mínimos.");
+}
+
+
     }
 }
