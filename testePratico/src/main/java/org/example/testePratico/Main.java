@@ -24,32 +24,5 @@ public class Main {
         funcionarios.add(new Funcionario("Laura", LocalDate.of(1994,7,8), new BigDecimal("3017.45"),"Gerente"));
         funcionarios.add(new Funcionario("Heloísa", LocalDate.of(2003,5,24), new BigDecimal("1606.85"),"Eletricista"));
         funcionarios.add(new Funcionario("Helena", LocalDate.of(1996, 9, 2), new BigDecimal("2799.93"), "Gerente"));
-
-        // Remover João
-        funcionarios.removeIf(func -> func.getNome().equals("João"));
-
-        // Exibir todos
-        for (Funcionario f : funcionarios) {
-            System.out.println("Nome: " + f.getNome());
-            System.out.println("Data Nascimento: " + f.getDataNascimento().format(formatter));
-            System.out.println("Salário: R$ " + f.getSalario().setScale(2, RoundingMode.HALF_UP).toString().replace('.', ','));
-            System.out.println("Função: " + f.getFuncao());
-            System.out.println("============================");
-        }
-
-        //Aumentar o salario em 10%
-        for (Funcionario f : funcionarios) {
-            f.setSalario(f.getSalario().multiply(new BigDecimal("1.10")));
-        }
-
-        System.out.println("\nAUMENTO DE 10%\n");
-
-        for (Funcionario f : funcionarios) {
-
-            System.out.println("Nome: " + f.getNome());
-            System.out.println("Salário: R$ " + f.getSalario().setScale(2, RoundingMode.HALF_UP).toString().replace('.', ','));
-            System.out.println("============================");
-
-        }
     }
 }
