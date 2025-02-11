@@ -3,6 +3,31 @@
  O projeto foi desenvolvido conforme os requisitos apresentados, e a seguir, estão descritos os detalhes de cada requisito, o código correspondente e a explicação do que está acontecendo em cada etapa.
 
 ---
+## **Sumário**
+
+- [Diagrama do Sistema](#diagrama-do-sistema)
+- [Requisito 1 - Classe Pessoa](#requisito-1---classe-pessoa)
+- [Requisito 2 - Classe Funcionario](#requisito-2---classe-funcionario)
+- [Requisito 3 - Classe Principal (Main)](#requisito-3---classe-principal-main)
+  - [3.1 - Inserir todos os funcionários](#31---inserir-todos-os-funcionários)
+  - [3.2 - Remover o funcionário João](#32---remover-o-funcionário-joão)
+  - [3.3 - Imprimir todos os funcionários](#33---imprimir-todos-os-funcionários)
+  - [3.4 - Aumento de 10% no salário](#34---aumento-de-10-no-salário)
+  - [3.5 - Agrupar os funcionários por função](#35---agrupar-os-funcionários-por-função)
+  - [3.6 - Imprimir os funcionários agrupados por função](#36---imprimir-os-funcionários-agrupados-por-função)
+  - [3.8 - Imprimir funcionários que fazem aniversário no mês 10 e 12](#38---imprimir-funcionários-que-fazem-aniversário-no-mês-10-e-12)
+  - [3.9 - Imprimir o funcionário com maior idade](#39---imprimir-o-funcionário-com-maior-idade)
+  - [3.10 - Imprimir os funcionários por ordem alfabética](#310---imprimir-os-funcionários-por-ordem-alfabética)
+  - [3.11 - Imprimir o total dos salários](#311---imprimir-o-total-dos-salários)
+  - [3.12 - Imprimir quantos salários mínimos ganha cada funcionário](#312---imprimir-quantos-salários-mínimos-ganha-cada-funcionário)
+- [Conclusão](#conclusão)
+
+---
+
+### **Diagrama do Sistema**
+O diagrama a seguir apresenta a estrutura das classes e a relação entre elas no sistema:
+
+![Diagrama do Sistema](/diagrama/UML.drawio.png)
 
 ### **Requisito 1 - Classe Pessoa**
 
@@ -401,7 +426,7 @@ Maria ganha 1,82 salários mínimos.
 Caio ganha 8,92 salários mínimos.
 Miguel ganha 17,34 salários mínimos.
 ```
-
 ---
 
-Com isso, cobrimos todas as operações descritas no projeto, incluindo o código e os resultados esperados no console para os requisitos que envolvem impressão de dados!
+## **Conclusão**
+Neste projeto, implementamos uma solução Java para atender aos requisitos descritos, utilizando os princípios da programação orientada a objetos e boas práticas de código. O projeto foi estruturado com classes bem definidas e com funcionalidades que abordam todas as solicitações, garantindo clareza e organização.
