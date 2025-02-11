@@ -28,5 +28,14 @@ public class Main {
         // Remover João
         funcionarios.removeIf(func -> func.getNome().equals("João"));
 
+        // Exibir todos
+        for (Funcionario f : funcionarios) {
+            System.out.println("Nome: " + f.getNome());
+            System.out.println("Data Nascimento: " + f.getDataNascimento().format(formatter));
+            System.out.println("Salário: R$ " + f.getSalario().setScale(2, RoundingMode.HALF_UP).toString().replace('.', ','));
+            System.out.println("Função: " + f.getFuncao());
+            System.out.println("============================");
+        }
+
     }
 }
