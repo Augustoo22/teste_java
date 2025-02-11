@@ -37,5 +37,19 @@ public class Main {
             System.out.println("============================");
         }
 
+        //Aumentar o salario em 10%
+        for (Funcionario f : funcionarios) {
+            f.setSalario(f.getSalario().multiply(new BigDecimal("1.10")));
+        }
+
+        System.out.println("\nAUMENTO DE 10%\n");
+
+        for (Funcionario f : funcionarios) {
+
+            System.out.println("Nome: " + f.getNome());
+            System.out.println("Salário: R$ " + f.getSalario().setScale(2, RoundingMode.HALF_UP).toString().replace('.', ','));
+            System.out.println("============================");
+
+        }
     }
 }
