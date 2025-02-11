@@ -7,6 +7,7 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,5 +75,17 @@ public class Main {
                 System.out.println("  - " + f.getNome() + " | Salário: R$ " + df.format(f.getSalario()));
             }
         }
+        
+        
+        System.out.println("\nFUNCIONÁRIOS QUE FAZEM ANIVERSÁRIO EM OUTUBRO OU DEZEMBRO:");
+
+        for (Funcionario f : funcionarios) {
+            int mes = f.getDataNascimento().getMonthValue();  
+            if (mes == 10 || mes == 12) {
+                System.out.println("Nome: " + f.getNome() + " | Data Nascimento: " + f.getDataNascimento().format(formatter));
+            }
+        }
+
+
     }
 }
