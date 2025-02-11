@@ -101,5 +101,15 @@ public class Main {
             int idade = Period.between(funcionarioMaisVelho.getDataNascimento(), LocalDate.now()).getYears();
             System.out.println("Nome: " + funcionarioMaisVelho.getNome() + " | Idade: " + idade);
         }
+
+        System.out.println("\nFUNCIONÁRIO EM ORDEM ALFABETICA:");
+
+
+        //Ordem alfabetica 
+        funcionarios.stream()
+            .sorted((f1, f2) -> f1.getNome().compareTo(f2.getNome())) 
+            .forEach(f -> System.out.println("Nome: " + f.getNome() + " | Data Nascimento: " + f.getDataNascimento().format(formatter) + 
+                                    " | Salário: R$ " + df.format(f.getSalario()) + " | Função: " + f.getFuncao()));
+
     }
 }
