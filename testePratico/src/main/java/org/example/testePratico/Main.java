@@ -86,6 +86,20 @@ public class Main {
             }
         }
 
+        System.out.println("\nFUNCIONÁRIO COM MAIOR IDADE:");
 
+        // Encontrar o funcionário com a maior idade
+        Funcionario funcionarioMaisVelho = funcionarios.stream()
+            .max((f1, f2) -> {
+                int idadeF1 = Period.between(f1.getDataNascimento(), LocalDate.now()).getYears();
+                int idadeF2 = Period.between(f2.getDataNascimento(), LocalDate.now()).getYears();
+                return Integer.compare(idadeF1, idadeF2);
+            })
+            .orElse(null);
+
+        if (funcionarioMaisVelho != null) {
+            int idade = Period.between(funcionarioMaisVelho.getDataNascimento(), LocalDate.now()).getYears();
+            System.out.println("Nome: " + funcionarioMaisVelho.getNome() + " | Idade: " + idade);
+        }
     }
 }
